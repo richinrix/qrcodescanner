@@ -1,6 +1,6 @@
 import React from "react";
 import Html5QrcodePlugin from "../qrplugin/QrcodePlugin";
-import Result from "./Result";
+// import Result from "./Result";
 class Scanner extends React.Component {
   state = {
     qrCode: "...waiting for scan",
@@ -27,7 +27,8 @@ class Scanner extends React.Component {
           disableFlip={false}
           qrCodeSuccessCallback={this.onNewScanResult}
         />
-        <Result QrResult={this.state.qrCode} />
+        <div class="text-white text-xl mt-5">{this.state.qrCode}</div>
+        {/* <Result QrResult={this.state.qrCode} /> */}
       </div>
     );
   }
